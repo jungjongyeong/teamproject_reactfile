@@ -1,0 +1,63 @@
+body { padding:0; margin:0; } 
+ul { margin:0; } 
+li { list-style-type:none; } 
+a { color:inherit; vertical-align:baseline; text-decoration:none; } 
+button { float: right; width: 20%; height: 40px; color:#fff; border:none; border-radius: 5px; background: none; cursor: pointer; } 
+/* 배경 및 searchForm */
+.back_form { position:relative; width:100%; height:100vh; background: no-repeat center; background-size: cover;; } 
+.bg-video__content { position: absolute; top: 0; left: 0;  width: 100%; height: 100%; object-fit: cover;z-index:-1 }
+.CITY_description { position: absolute; top: 15px; left: 15px; color: #fff; } 
+.CITY_description > div { display:inline-block; } 
+.CITY_description .current_temp { font-size:100px; } 
+.CITY_description .city { font-size:50px; } 
+.articleModal { float:right; position:relative; width:37%; height:100%; color:#fff; } 
+.articleModal::before { content: ""; position:absolute; top:0; right:0; bottom:0; left:0; width:100%; height:100%; background:#000; opacity: 0.6; } 
+.articleModal ul { display: flex; padding: 0; z-index: 10; justify-content: center; } 
+.articleModal ul li > div i.fa-magnifying-glass { display: inline-block; width:50px; height:50px; color:#fff; font-size:70px; z-index: 10; } 
+.search_form { position:absolute; top:2%; left:50%; transform: translateX(-50%); border-bottom:2px solid #fff; } 
+.search_form i { transform:translateY(1px) } 
+#data1 { position: relative; width: 60%; height: auto; height: 40px; padding: 0 .5em; color:#fff; border:none; border-radius: 5px; background:none } 
+
+
+/* Swiper */
+.Modal_page { position: absolute; top: 12%; left: 50%;; width: 80%; height: 40%; z-index: 2; transform: translateX(-50%); } 
+.swiper-container { width:300px; height:300px; } 
+.swiper-slide { display:flex; width:300px; height:300px; border-radius:5px; text-align:center; align-items:center; justify-content:center; box-shadow:0 0 10px silver inset; box-sizing:border-box; } 
+.slider1 { background:url(../img/cloth_img.jfif) no-repeat center; background-size: cover; } 
+.slide_span { display: flex; transform: translateY(-30px); cursor: pointer; } 
+.slide_span span { display: inline-block; position: relative; width: 100%; text-align: center; } 
+.slide_span i.fa-right-to-bracket { display: inline-block; position: absolute; right:0; transform: translateY(3px); } 
+.slider2 { background:url(../img/food_img.png) no-repeat center; background-size: cover; } 
+.slider3 { background:url(../img/travel.png) no-repeat center; background-size: cover; } 
+.slider4 { background:url(../img/dust_img.png) no-repeat center; background-size: cover; } 
+.swiper-pagination { transform: translateY(50px); } 
+.zoom { width:100%; height:100%; cursor: pointer; } 
+
+/* Weather Details */
+.weather { position: absolute;
+    bottom: 0px;
+    width: 80%;
+    height: 41%;
+    padding: 0px 50px;
+    left: 50%;
+    transform: translate(-50%);} 
+.weather h1 { display: block; padding:0 0 10px; border-bottom:2px solid #fff; } 
+.weather > div { line-height: 70px; } 
+.imgUrlDiv { position:absolute; top:0; right:0; bottom: 0; left:0; width:100%; height:100%; z-index: -1; background-size: cover; } 
+.weather .city { font-size:15px; } 
+.weather .icon { transform: translateY(-5px); } 
+.weather_text .current_temp { font-size:15px; } 
+.weather .weather_description { font-size:13px; } 
+.weather .Temp_right { float:right; } 
+.weather .humidity { float:right } 
+.weather .wind { float:right } 
+.weather_text .dust { float:right; font-size:16px; } 
+.weather .cloud { float:right; } 
+
+/* 모달창 css */
+.modal { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index: 99; backdrop-filter: blur(10px);} 
+.modal .imgbox { position:absolute; top:50%; left:50%; width:80%; height:80%; z-index: 100; transform: translate(-50%, -50%); } 
+.modal .imgbox button { position: absolute; bottom: 0; /* top: 0; */
+ left: 50%; padding: 5px 10px; color: #fff; background: #000; transform: translateX(-50%); } 
+
+

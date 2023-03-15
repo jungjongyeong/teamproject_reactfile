@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/foodPage.css">
+    <link rel="stylesheet" href="./css/foodMap.css">
+    <link rel="stylesheet" href="./css/rwdfoodPage.css">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+</head>
+<body>
+    <!-- 
+            Clear       Cloud       Rain
+             냉면       칼국수     두부김치
+             치킨         짬뽕      부침개
+             햄버거       국밥       우동          
+            해물탕        부대찌개   삼겹살 
+     -->
+     <!-- <a href="https://kr.freepik.com/free-vector/food-critic-abstract-illustration_20770429.htm#query=%EC%9D%8C%EC%8B%9D%20%EC%B6%94%EC%B2%9C&position=1&from_view=search&track=ais">작가 vectorjuice</a> 출처 Freepik -->
+
+     <div class="wrap">
+        <h3>오늘 <span>뭐</span> 먹지?</h3>
+        <div class="slide_outer">
+            <div class="slide_group">
+                <div class="slide slide1"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div>
+                <div class="slide slide4"></div>
+                <div class="slide slide5"></div>
+            </div>
+            <div class="slide_group">
+                <div class="slide slide1"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div>
+                <div class="slide slide4"></div>
+                <div class="slide slide5"></div>
+            </div>
+            <div class="slide_group">
+                <div class="slide slide1"></div>
+                <div class="slide slide2"></div>
+                <div class="slide slide3"></div>
+                <div class="slide slide4"></div>
+                <div class="slide slide5"></div>
+            </div>
+        </div>
+     </div>
+    
+     <div class="map_wrap">
+        <div id="map"></div>
+    
+        <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <div>
+                    <form onsubmit="searchPlaces(); return false;" id="food_map">
+                        키워드 : <input type="text" value="" id="keyword" size="15" disabled> 
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <ul id="placesList"></ul>
+            <div id="pagination"></div>
+        </div>
+    </div>
+
+
+     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a5ebc956a3759fbda56548584f8140dc&libraries=services"></script>
+     <script src="./js/foodPage.js"></script>
+     <script type="module" src="./js/foodMap.js"></script>
+     <script type="module" src="./js/foodPath.js"></script>
+     <script type="module">
+        import rand from './js/rand.js'
+        import refFood from './js/refFood.js'
+        import searchPlaces from './js/foodMap.js'
+        
+
+        let testType = rand(1, 3);
+        console.log(testType);
+        refFood(testType);
+
+        var keymenu = ""
+
+        $('.slide').on('click', function(){
+            keymenu = $(this).attr("data-menu")
+            console.log(keymenu)
+            searchPlaces(keymenu)
+            $('.wrap h3 span').text(keymenu)
+        })
+    </script>
+</body>
+</html>

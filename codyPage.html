@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/codyPage.css">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+        오늘의 추천 의상
+        온도별로 3개 + (우산여부+@) 추천하기
+
+     -->
+    <!-- <a href="https://kr.freepik.com/free-vector/large-set-of-clothes-for-men-and-women-fashion-icons-vector-illustration_10704987.htm#query=%EC%98%B7&position=8&from_view=keyword&track=sph">작가 macrovector</a> 출처 Freepik -->
+
+    <div class="wrap">
+        <h3>TODAY CODY</h3>
+        <div class="clothBunrew">
+            <ul>
+                <li class="manCloth on">남성옷</li>
+                <li class="girlCloth">여성옷</li>
+            </ul>
+        </div>
+
+        <div class="man_slide on">
+            <ul class="slide_group">
+                <li class="slide slide1">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg1 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide2">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg2 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide3">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg3 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide4">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg4 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide5">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg5 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide6">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg6 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide7">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg7 introimg"></div>
+                    </div>
+                </li>
+                <li class="slide slide8">
+                    <div class="text"></div>
+                    <div class="clothes">
+                        <div class="introimg8 introimg"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script type="module">
+
+
+
+        $(".introimg1").css("background-image", "url(./img/clothes/9.gif)");
+        $(".introimg2").css("background-image", "url(./img/clothes/3.gif)");
+        $(".introimg3").css("background-image", "url(./img/clothes/4.gif)");
+        $(".introimg4").css("background-image", "url(./img/clothes/5.gif)");
+        $(".introimg5").css("background-image", "url(./img/clothes/6.gif)");
+        $(".introimg6").css("background-image", "url(./img/clothes/7.gif)");
+        $(".introimg7").css("background-image", "url(./img/clothes/1.gif)");
+        $(".introimg8").css("background-image", "url(./img/clothes/5.gif)");
+
+
+        //  클릭시 의상
+        $('.clothBunrew ul li.manCloth').on('click', function () {
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.man_slide').addClass('on');
+            $('.girl_slide').removeClass('on')
+
+            $(".introimg1").css("background-image", "url(./img/clothes/9.gif)");
+            $(".introimg2").css("background-image", "url(./img/clothes/3.gif)");
+            $(".introimg3").css("background-image", "url(./img/clothes/4.gif)");
+            $(".introimg4").css("background-image", "url(./img/clothes/5.gif)");
+            $(".introimg5").css("background-image", "url(./img/clothes/6.gif)");
+            $(".introimg6").css("background-image", "url(./img/clothes/7.gif)");
+            $(".introimg7").css("background-image", "url(./img/clothes/1.gif)");
+            $(".introimg8").css("background-image", "url(./img/clothes/5.gif)");
+
+        })
+
+
+        $('.clothBunrew ul li.girlCloth').on('click', function () {
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.girl_slide').addClass('on');
+            $('.man_slide').removeClass('on')
+
+            $(".introimg1").css("background-image", "url(./img/clothes/14.gif)");
+            $(".introimg2").css("background-image", "url(./img/clothes/15.gif)");
+            $(".introimg3").css("background-image", "url(./img/clothes/16.gif)");
+            $(".introimg4").css("background-image", "url(./img/clothes/17.gif)");
+            $(".introimg5").css("background-image", "url(./img/clothes/18.gif)");
+            $(".introimg6").css("background-image", "url(./img/clothes/19.gif)");
+            $(".introimg7").css("background-image", "url(./img/clothes/20.gif)");
+            $(".introimg8").css("background-image", "url(./img/clothes/21.gif)");
+        })
+
+
+    </script>
+    <script type="module" src="./js/clothPath.js"></script>
+</body>
+
+</html>

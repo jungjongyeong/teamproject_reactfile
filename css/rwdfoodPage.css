@@ -1,0 +1,21 @@
+@charset "utf-8"; @media screen and (max-width:988px){
+    body {
+        flex-direction: column;
+    }
+    .wrap {
+        order: 1;
+    }
+    .map_wrap {
+        order: 2;
+    }
+    .wrap h3 {
+        margin: 20px 0;
+    }
+    .wrap .slide {
+        height: 25vh;
+    }
+    .map_wrap,
+    .map_wrap * {
+        margin: 0;
+    }
+}

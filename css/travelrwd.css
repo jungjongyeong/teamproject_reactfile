@@ -1,0 +1,18 @@
+@media screen and (max-width: 1024px) {
+  #section #contBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 80%;
+  }
+  #section #contBox #close {
+    display: block;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #section #contBox {
+    display: flex;
+  }
+}/*# sourceMappingURL=travelrwd.css.map */
